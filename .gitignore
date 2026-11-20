@@ -1,0 +1,162 @@
+# =============================================================
+# phantom_assistant - .gitignore
+# Flutter (macOS) + segredos + dados locais do assistente
+# =============================================================
+
+# -------------------------------------------------------------
+# SEGREDOS E CHAVES (nunca versionar)
+# -------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+secrets/
+api_keys*
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.mobileprovision
+*.keystore
+*.jks
+key.properties
+
+# -------------------------------------------------------------
+# DADOS LOCAIS DO ASSISTENTE (conversas, memória, gravações)
+# -------------------------------------------------------------
+# Banco local (drift / SQLite)
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+
+# Pastas de dados pessoais (grave aqui o que não pode ir para o Git)
+data/
+recordings/
+transcripts/
+memory/
+exports/
+
+# Modelos de IA locais (arquivos grandes)
+models/
+*.gguf
+*.ggml
+*.safetensors
+*.onnx
+
+# Logs
+*.log
+logs/
+
+# -------------------------------------------------------------
+# FLUTTER / DART
+# -------------------------------------------------------------
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.fvm/
+pubspec_overrides.yaml
+
+# Código gerado (rode `dart run build_runner build` após clonar)
+*.g.dart
+*.freezed.dart
+*.gr.dart
+*.mocks.dart
+
+# Cobertura de testes
+coverage/
+lcov.info
+
+# Symbolication / ofuscação
+app.*.symbols
+app.*.map.json
+
+# -------------------------------------------------------------
+# macOS (Xcode / CocoaPods)
+# -------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+macos/Flutter/ephemeral/
+macos/Flutter/Flutter-Generated.xcconfig
+macos/Flutter/flutter_export_environment.sh
+macos/Pods/
+**/Pods/
+macos/.symlinks/
+*.xcuserstate
+xcuserdata/
+DerivedData/
+*.xcscmblueprint
+*.xccheckout
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# -------------------------------------------------------------
+# Android / iOS / Windows / Linux (caso adicione plataformas)
+# -------------------------------------------------------------
+**/android/.gradle/
+**/android/captures/
+**/android/local.properties
+**/android/gradle-wrapper.jar
+**/android/app/debug
+**/android/app/profile
+**/android/app/release
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/ephemeral/
+**/ios/Pods/
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+
+# -------------------------------------------------------------
+# PLUGINS NATIVOS (Swift / Kotlin) - artefatos de build
+# -------------------------------------------------------------
+.build/
+.swiftpm/
+.gradle/
+*.class
+*.o
+
+# -------------------------------------------------------------
+# IDEs E EDITORES
+# -------------------------------------------------------------
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+*.swp
+*.swo
+*~
+
+# -------------------------------------------------------------
+# FERRAMENTAS DE IA / AGENTES (configs locais)
+# -------------------------------------------------------------
+.claude/settings.local.json
+.cursor/
+.aider*
+
+# -------------------------------------------------------------
+# TEMPORÁRIOS
+# -------------------------------------------------------------
+tmp/
+temp/
+*.tmp
+*.bak
+Thumbs.db
